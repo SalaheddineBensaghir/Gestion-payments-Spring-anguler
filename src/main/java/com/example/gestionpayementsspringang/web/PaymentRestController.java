@@ -6,10 +6,7 @@ import com.example.gestionpayementsspringang.entities.PaymentType;
 import com.example.gestionpayementsspringang.entities.Student;
 import com.example.gestionpayementsspringang.repository.PaymentRepository;
 import com.example.gestionpayementsspringang.repository.StudentRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -60,6 +57,12 @@ return studentRepository.findByCode(code);
 @GetMapping("/studentsByProgramId")
 public List<Student> getStudentsByProgramId(@RequestParam String programId){
         return studentRepository.findByProgramId(programId);
+}
+@PutMapping("/payments/{id}")
+public Payment updatePaymentStatus(@RequestParam PaymentStatus status,@PathVariable Long id){
+        Payment payment = paymentRepository.findById(id).get();
+        payment.setStatus(status);
+        return paymentRepository.save(payment);
 }
 
 }

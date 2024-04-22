@@ -1,6 +1,7 @@
 package com.example.gestionpayementsspringang;
 
 import com.example.gestionpayementsspringang.entities.Payment;
+import com.example.gestionpayementsspringang.entities.PaymentStatus;
 import com.example.gestionpayementsspringang.entities.PaymentType;
 import com.example.gestionpayementsspringang.entities.Student;
 import com.example.gestionpayementsspringang.repository.PaymentRepository;
@@ -35,7 +36,7 @@ public class GestionPayementsSpringAngApplication {
                 for (int i=0;i<10;i++){
                     int index = random.nextInt(paymentTypes.length);
 
-                    Payment payment= Payment.builder().amount(1000+(int)(Math.random()+20000)).type(paymentTypes[index]).date(LocalDate.now()).student(student).build();
+                    Payment payment= Payment.builder().amount(1000+(int)(Math.random()+20000)).type(paymentTypes[index]).status(PaymentStatus.CREATED).date(LocalDate.now()).student(student).build();
                     paymentRepository.save(payment);
                 }
             });
