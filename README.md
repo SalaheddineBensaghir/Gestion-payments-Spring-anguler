@@ -30,3 +30,6 @@
 <img src="image/ang%202.png">
 <h4>Affichage des payements avec une Pagination frontend :</h4>
 <img src="image/ang%203.png">
+<h4>Affichage et la recherche des étudiants :</h4>
+<img src="image/ang%204.png">
+<img src="image/ang%205.png">
