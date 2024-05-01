@@ -6,8 +6,8 @@ import com.example.gestionpayementsspringang.entities.PaymentType;
 import com.example.gestionpayementsspringang.entities.Student;
 import com.example.gestionpayementsspringang.repository.PaymentRepository;
 import com.example.gestionpayementsspringang.repository.StudentRepository;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
+
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -17,11 +17,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.UUID;
-
+@Service
 public class PaymentService {
 
-    private StudentRepository studentRepository;
-    private PaymentRepository paymentRepository;
+    private final StudentRepository studentRepository;
+    private final PaymentRepository paymentRepository;
 
     public PaymentService(StudentRepository studentRepository, PaymentRepository paymentRepository) {
         this.studentRepository = studentRepository;

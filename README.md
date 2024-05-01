@@ -22,3 +22,11 @@
 <img src="image/spring-ang 11.png"/>
 <h4>Consulter le reçu d'un payement  (fichier pdf) : </h4>
 <img src="image/spring-ang 10.png"/>
+
+<h3> La partie frontend avec Angular Material : </h3>
+<h4>Authentification :</h4>
+<img src="image/ang%201.png">
+<h4>La page d'accueil :</h4>
+<img src="image/ang%202.png">
+<h4>Affichage des payements avec une Pagination frontend :</h4>
+<img src="image/ang%203.png">
